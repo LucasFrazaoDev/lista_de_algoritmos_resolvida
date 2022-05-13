@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 20</title>
+</head>
+
+<body>
+    <h1>Exercício 20</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let number = parseInt(prompt('Digite um número'))
+        let resto = number % 2
+
+        if (resto == 0) {
+            document.getElementById('retorno').innerHTML = `O número ${number} é par e seu resto na divisão por 2 é ${resto}.`
+        } else {
+            document.getElementById('retorno').innerHTML = `O número ${number} é ímpar e seu resto na divisão por 2 é ${resto}.`
+        }
+
+    </script>
+
+</body>
+
+</html>

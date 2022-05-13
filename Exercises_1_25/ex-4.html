@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+        let nota1 = prompt('Digite o valor da primeira nota:')
+        let nota2 = prompt('Digite o valor da segunda nota:')
+
+        document.getElementById('retorno').innerHTML = `A soma entre ${nota1} e ${nota2} é ${parseInt(nota1) + parseInt(nota2)}`
+
+        /*
+        - Você poderia criar uma terceira variável para atribuir a soma dos números
+        - É necessário o uso do método parseInt pois todo valor de entrada na linguagem JS é recebido como tipo string; e como estamos fazendo operação de adição o operador + (que também é usado para concatenação) irá unir os valores. 
+        Ex: 
+        '7' + '9' = '79'
+        Usando o método parseInt teremos o resultado desejado: 
+        7 + 9 = 79
+        */
+
+    </script>
+
+</body>
+</html>

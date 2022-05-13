@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+
+<body>
+    <h1>Exercício 7</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let number = prompt('Digite um número: ')
+
+        document.getElementById('retorno').innerHTML = `O número ${number} tem como dobro o valor ${number * 2} e sua terça parte é ${(number / 3).toFixed(3)}`
+
+        /*
+        - Aqui novamente temos a inteligência do JS fazendo as operações corretamente MAS é recomendado realizar a conversão para number, ficando parseInt(number)
+        - Usei o método toFixed para limitar o valor decimal em 3 casas após a vírgula
+        - A partir daqui não irei mas relembrar esses detalhes, você já deve ter entendido =D
+        */
+
+    </script>
+
+</body>
+
+</html>

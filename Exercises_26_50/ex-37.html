@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 37</title>
+</head>
+
+<body>
+    <h1>Exercício 37</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let name = prompt('Genero do funcionario(masculino ou feminino):')
+        let money = parseInt(prompt('Digite o valor do salário atual:'))
+        let time = parseInt(prompt('Há quantos anos trabalha na empresa:'))
+
+        switch (name) {
+            case 'masculino':
+                if (time < 20) {
+                    document.getElementById('retorno').innerHTML = `Parabéns moço, por estar há ${time} anos na empresa seu novo salário será R$${money * 1.03} reais.`
+                } else if (time >= 20 && time <= 30) {
+                    document.getElementById('retorno').innerHTML = `Parabéns moço, por estar há ${time} anos na empresa seu novo salário será R$${money * 1.13} reais.`
+                } else {
+                    document.getElementById('retorno').innerHTML = `Parabéns moço, por estar há ${time} anos na empresa seu novo salário será R$${money * 1.25} reais.`
+                }
+                break;
+        
+            case 'feminino':
+            if (time < 15) {
+                    document.getElementById('retorno').innerHTML = `Parabéns querida, por estar há ${time} anos na empresa seu novo salário será R$${money * 1.05} reais.`
+                } else if (time >= 15 && time <= 20) {
+                    document.getElementById('retorno').innerHTML = `Parabéns querida, por estar há ${time} anos na empresa seu novo salário será R$${money * 1.12} reais.`
+                } else {
+                    document.getElementById('retorno').innerHTML = `Parabéns querida, por estar há ${time} anos na empresa seu novo salário será R$${money * 1.23} reais.`
+                }
+                break;
+        
+            default:
+                break;
+        }
+        
+
+    </script>
+
+</body>
+
+</html>

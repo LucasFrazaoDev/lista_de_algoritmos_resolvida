@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+
+<body>
+    <h1>Exercício 8</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let distancia = prompt('Digite uma distância em metros: ')
+
+        document.getElementById('retorno').innerHTML = `A distância de ${distancia} metros corresponde à ${distancia / 1000} Km, ${distancia / 100} Hm e ${distancia / 10} Dam. Para seus submúltiplos equivale à ${distancia * 10} dm, ${distancia * 100} cm e ${distancia * 1000} mm.`
+
+
+    </script>
+
+</body>
+
+</html>

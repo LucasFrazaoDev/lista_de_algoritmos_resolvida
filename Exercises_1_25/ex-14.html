@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 14</title>
+</head>
+
+<body>
+    <h1>Exercício 14</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let quilometragem = prompt('Quantos quilometros o carro rodou?')
+        let diasRodados = prompt('Por quantos dias ele foi alugado?')
+
+        document.getElementById('retorno').innerHTML = `O carro foi alugado por ${diasRodados} dias e rodou ${quilometragem} Km, o total a ser pago é de R$${parseInt(diasRodados) * 90 + parseInt(quilometragem) * 0.2} reais.` 
+
+        /*
+        Você poderia criar uma terceira variável para tratar o processo de cálculo
+
+        let valor = parseInt(diasRodados) * 90 + parseInt(quilometragem) * 0.2
+
+
+        Ou ainda criar 3 variáveis, uma para tratar cada valor e a terceira para somar.
+
+        Ou então ainda passar o método parseInt no prompt
+
+        */
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio proposto</title>
+</head>
+
+<body>
+    <h1>Desafio acrescentado por Lucas Frazão</h1>
+    <h2>Transforme um número decimal em binário</h2>
+
+    <div>
+        <form action="">
+            <input type="number" placeholder="Digite o número em decimal" id="number">
+            <button type="button" onclick="converter()">Converter</button>
+            <button type="button" onclick="limpar()">Limpar</button>
+
+        </form>
+    </div>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        // CONVERSÃO DE BINÁRIO EM DECIMAL, NECESSÁRIO CONHECIMENTO EM ITERAÇÕES E ARRAYS
+        // ALGUNS VALORES APRESENTAM UM ZERO A MAIS A ESQUERDA MAS NÃO AFETA O RESULTADO, FICA A SUGESTÃO PARA VOCÊ CORRIGIR
+
+        function converter() {
+
+            document.getElementById('retorno').innerHTML = 0 // Pra quando clicar duas vezes em converter na sequencia
+
+            let number = document.getElementById('number').value
+            var bin = []
+            let resto
+
+            if (number == 0) {
+                document.getElementById('retorno').innerHTML = 0
+            } else {
+                while (number != 0) {
+                    resto = parseInt(number % 2)
+                    bin.push(resto)
+                    number = parseInt(number / 2)
+                }
+
+                while (bin.length != 0) {
+                    let binNumber = bin.pop()
+                    document.getElementById('retorno').innerHTML += binNumber
+                }
+            }
+        }
+
+        function limpar() {
+            bin = []
+            document.getElementById('number').value = ''
+            document.getElementById('retorno').innerHTML = ''
+        }
+
+    </script>
+
+</body>
+
+</html>

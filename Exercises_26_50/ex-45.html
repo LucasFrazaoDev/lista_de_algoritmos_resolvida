@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 45</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 45</h1>
+    <h2>Exercício 44 com a correção</h2>
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let firstValue = parseInt(prompt('Digite o primeiro valor:'))
+        let secondValue = parseInt(prompt('Digite o segundo valor:'))
+        let inc = parseInt(prompt('Digite o incremento/decremento valor:'))
+
+        // No primeiro caso ocorre um incremento
+        if (firstValue < secondValue) {
+            setTimeout(() => {
+                for (let i = firstValue; i <= secondValue; i += inc) {
+                    document.getElementById('retorno').innerHTML += `${i} </br>`
+                }
+                document.getElementById('retorno').innerHTML += `Acabou!`
+            }, 1000);
+
+        // No segundo caso ocorre um decremento
+        } else if (firstValue > secondValue) {
+            setTimeout(() => {
+                for (let i = firstValue; i >= secondValue; i -= inc) {
+                    document.getElementById('retorno').innerHTML += `${i} </br>`
+                }
+                document.getElementById('retorno').innerHTML += `Acabou!`
+            }, 1000);
+
+        // Quando valor inicial e final são iguais
+        } else {
+            document.getElementById('retorno').innerHTML += `O início e o fim são iguais, impossível de executar!`
+        }
+    </script>
+
+</body>
+
+</html>

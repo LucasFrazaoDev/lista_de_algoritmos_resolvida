@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 24</title>
+</head>
+
+<body>
+
+    <h1>Atividade 24</h1>
+
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let distancia = parseInt(prompt('Digite a distância que deseja percorrer em quilometros: '))
+
+        if (distancia <= 200) {
+            document.getElementById('retorno').innerHTML = `Sua passagem irá custar R$${distancia * 0.5} reais.`
+        } else {
+            document.getElementById('retorno').innerHTML = `Sua passagem irá custar R$${distancia * 0.45} reais.`
+        }
+
+    </script>
+
+</body>
+
+</html>

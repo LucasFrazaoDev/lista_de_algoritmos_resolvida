@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 32</title>
+</head>
+
+<body>
+
+    <div style="margin: 0 auto; max-width: 550px">
+        <h1>Atividade 32 - Desafio</h1>
+        <h2>Adivinhe o número que a máquina sorteou de 1 a 10!</h2>
+        <form action="">
+            <label for="player">Digite um número:</label><br>
+            <input type="text" id="player" placeholder="Digite aqui">
+            <button type="button" onclick="play()">Jogar!</button>
+        </form>
+        <h3 id="retorno"></h3>
+    </div>
+
+
+
+    <script>
+        // Sorteando o número uma única vez fora da função, usado quando o jogador tem um certo número de tentativas, fica como desafio para você
+        // let pc = parseInt(Math.random() * 11)
+
+        function play() {
+            let player = parseInt(document.getElementById('player').value)
+            let pc = parseInt(Math.random() * 11) // Sorteia o número a cada vez que clicar no botão
+
+            // garantir que teremos apenas valores de 1 a 3
+            if (pc == 0) {
+                do {
+                    pc = parseInt(Math.random() * 4)
+                } while (pc == 0);
+            }
+
+            // Conferindo resultado
+            if (player == pc) {
+                document.getElementById('retorno').innerHTML = `Parabéns, você acertou!`
+            } else {
+                document.getElementById('retorno').innerHTML = `Você errou, o número era ${pc}!`
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

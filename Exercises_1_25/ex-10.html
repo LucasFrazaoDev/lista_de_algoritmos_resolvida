@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+
+<body>
+    <h1>Exercício 10</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let altura = prompt('Qual a altura da parede?')
+        let largura = prompt('Qual a largura da parede?')
+
+        let A = altura * largura
+
+        document.getElementById('retorno').innerHTML = `A parede tem uma área de ${A} metros quadrados, logo precisa de ${A / 2} litros de tinta.`
+
+
+    </script>
+
+</body>
+
+</html>

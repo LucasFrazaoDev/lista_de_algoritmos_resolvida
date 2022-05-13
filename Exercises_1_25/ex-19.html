@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 19</title>
+</head>
+
+<body>
+    <h1>Exercício 19</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let nome = prompt('Digite o nome do aluno(a):')
+        let nota1 = parseInt(prompt('Digite o valor da primeira nota:'))
+        let nota2 = parseInt(prompt('Digite o valor da segunda nota: '))
+
+        let media = (nota1 + nota2) / 2
+
+        if (media >= 7) {
+            console.log(media)
+            document.getElementById('retorno').innerHTML = `Parabéns ${nome}, você foi aprovado!`
+        } else {
+            console.log(media)
+            document.getElementById('retorno').innerHTML = `Olha ${nome}, tenho uma má notícia para você...`
+        }
+
+    </script>
+
+</body>
+
+</html>

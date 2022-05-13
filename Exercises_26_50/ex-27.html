@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 27</title>
+</head>
+
+<body>
+    <h1>Exercício 27</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let nota1 = parseInt(prompt('Digite o valor da primeira nota: '))
+        let nota2 = parseInt(prompt('Digite o valor da segunda nota: '))
+
+        media = (nota1 + nota2) / 2
+
+        if (media >= 7) {
+            document.getElementById('retorno').innerHTML = `APROVADO`
+        } else if (media >= 5 && media <= 6.9) {
+            document.getElementById('retorno').innerHTML = `RECUPERAÇÃO`
+        } else {
+            document.getElementById('retorno').innerHTML = `REPROVADO`
+        }
+
+    </script>
+
+</body>
+
+</html>

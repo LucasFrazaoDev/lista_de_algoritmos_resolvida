@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+
+<body>
+    <h1>Exercício 9</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let money = prompt('Digite a valor que você possui em reais: ')
+
+        document.getElementById('retorno').innerHTML = `Na cotação de hoje (04/05/2022) o dolár está valendo R$5.02 reais, então seus ${money} reais são em torno de U$${(money / 5.02).toFixed(2)} doláres. `
+
+
+    </script>
+
+</body>
+
+</html>

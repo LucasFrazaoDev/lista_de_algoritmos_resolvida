@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 16</title>
+</head>
+
+<body>
+    <h1>Exercício 16 - Desafio do fumante</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let numeroCigarros = parseInt(prompt('Quantos cigarros você fuma por dia?'))
+        let anos = parseInt(prompt('Ao todo, quantos anos você passou fumando?'))
+
+        let tempoDeVidaPerdido = numeroCigarros * anos * (1 /144) * 365
+
+        // 10 minutos equivale a 1/144 de um dia
+        // Coloquei uma condicional a mais para retornar um valor exato ou aproximado
+
+        if (tempoDeVidaPerdido % 1 == 0) {
+            document.getElementById('retorno').innerHTML = `Você perdeu exatamente ${tempoDeVidaPerdido.toFixed(0)} dias de vida.` 
+        } else {
+            document.getElementById('retorno').innerHTML = `Você perdeu cerca de ${tempoDeVidaPerdido.toFixed(0)} dias de vida.`
+        }
+
+
+    </script>
+
+</body>
+
+</html>

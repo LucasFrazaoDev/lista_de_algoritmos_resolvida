@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 17</title>
+</head>
+
+<body>
+    <h1>Exercício 17</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let velocidade = parseInt(prompt('Qual a velocidade do veículo autuado em Km/h?'))
+
+        if (velocidade > 80) {
+            document.getElementById('retorno').innerHTML = `Você estava acima do limite de velocidade e foi multado em R$${(velocidade - 80) * 5} reais.`
+        } else {
+            document.getElementById('retorno').innerHTML = `Parabéns cidadão anônimo, você está dentro da lei =D`
+        }
+
+    </script>
+
+</body>
+
+</html>

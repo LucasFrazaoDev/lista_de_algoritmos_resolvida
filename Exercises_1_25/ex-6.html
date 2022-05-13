@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <h1>Exercício 6</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+        
+        let number = prompt('Digite um número: ')
+
+        document.getElementById('retorno').innerHTML = `O número ${number} tem como sucessor o número ${parseInt(number) + 1} e antecessor o número ${number - 1}`
+
+        /*
+        - Repare que utilizei o método parseInt apenas para o sucessor, isso porque o JS tem a inteligência de realizar as demais operações corretamente quando identifica que o valor do tipo string contém um número MAS NA PRÁTICA você deve fazer a conversão para evitar futuros bugs, então teriamos parseInt(number) - 1
+        - Você pode criar duas variáveis adicionais para atribuir os valores de sucessor e antecessor 
+        */
+
+    </script>
+
+</body>
+</html>

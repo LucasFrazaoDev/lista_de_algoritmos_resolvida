@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 44</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 44</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let firstValue = parseInt(prompt('Digite o primeiro valor:'))
+        let secondValue = parseInt(prompt('Digite o segundo valor:'))
+        let inc = parseInt(prompt('Digite o incremento valor:'))
+
+        // Usando setTimeout apenas para melhorar a visualização quando iniciar a página
+        setTimeout(() => {
+            for (let i = firstValue; i <= secondValue; i += inc) {
+                document.getElementById('retorno').innerHTML += `${i} </br>`
+            }
+            document.getElementById('retorno').innerHTML += `Acabou!`
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

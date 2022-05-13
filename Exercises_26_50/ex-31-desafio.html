@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 31</title>
+</head>
+
+<body>
+
+    <h1>Atividade 31 - Desafio</h1>
+    <div>
+        <h2>JoKenPo (pedra-papel-tesoura)</h2>
+        <form action="">
+            <label for="player">Faça sua Escolha</label>
+            <select name="player" id="player">
+                <option disabled selected>Escolha um elemento</option>
+                <option value="1">Pedra</option>
+                <option value="2">Papel</option>
+                <option value="3">Tesoura</option>
+            </select>
+            <button type="button" onclick="play()">Jogar!</button>
+        </form>
+    </div>
+
+    <h3 id="retorno"></h3>
+    <script>
+
+        function play() {
+            let player = parseInt(document.getElementById('player').value) // parseInt converte string em number
+            let pc = parseInt(Math.random() * 4)
+
+            // garantir que teremos apenas valores de 1 a 3
+            if (pc == 0) {
+                do {
+                    pc = parseInt(Math.random() * 4)
+                } while (pc == 0);
+            }
+            
+            // Comparando os resultados e definindo o vencedor
+            if (player === pc) {
+                document.getElementById('retorno').innerHTML = `Deu empate, tente novamente!`
+            } else {
+                switch (player) {
+                    case 1:
+
+                        if (pc == 2) {
+                            document.getElementById('retorno').innerHTML = `O PC escolheu PAPEL e você PERDEU!`
+                        } else {
+                            document.getElementById('retorno').innerHTML = `O PC escolheu TESOURA e você GANHOU!`
+                        }
+                        break;
+
+                    case 2:
+
+                        if (pc == 1) {
+                            document.getElementById('retorno').innerHTML = `O PC escolheu PEDRA e você GANHOU!`
+                        } else {
+                            document.getElementById('retorno').innerHTML = `O PC escolheu TESOURA e você PERDEU!`
+                        }
+                        break;
+
+                    case 3:
+
+                        if (pc == 1) {
+                            document.getElementById('retorno').innerHTML = `O PC escolheu PEDRA e você PERDEU!`
+                        } else {
+                            document.getElementById('retorno').innerHTML = `O PC escolheu PAPEL e você GANHOU!`
+                        }
+                        break;
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

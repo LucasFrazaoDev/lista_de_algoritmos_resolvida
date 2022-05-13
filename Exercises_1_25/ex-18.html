@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 18</title>
+</head>
+
+<body>
+    <h1>Exercício 18</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let ano = parseInt(prompt('Em que ano você nasceu?'))
+        let idade = 2022 - ano
+
+        if (idade >= 18 ) {
+            document.getElementById('retorno').innerHTML = `Parabéns, você tem ${idade} anos e já pode votar!`
+        } else {
+            document.getElementById('retorno').innerHTML = `Sinto muito, você tem apenas ${idade} anos e ainda falta ${18 - idade} ano(s) para poder votar (obrigatoriamente).`
+        }
+
+    </script>
+
+</body>
+
+</html>

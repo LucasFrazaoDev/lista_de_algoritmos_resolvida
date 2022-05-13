@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 26</title>
+</head>
+
+<body>
+    <h1>Exercício 26</h1>
+
+    <h3 id="retorno"></h3>
+
+    <script>
+
+        let valor1 = parseInt(prompt('Digite o primeiro valor: '))
+        let valor2 = parseInt(prompt('Digite o segundo valor: '))
+
+        if (valor1 > valor2) {
+            document.getElementById('retorno').innerHTML = `O PRIMEIRO valor é o maior!`
+        } else if (valor1 < valor2) {
+            document.getElementById('retorno').innerHTML = `O SEGUNDO valor é o maior!`
+        } else {
+            document.getElementById('retorno').innerHTML = `OS DOIS VALORES SÃO IGUAIS!`
+        }
+
+    </script>
+
+</body>
+
+</html>
