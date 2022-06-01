@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 51</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 51</h1>
+    <h1>Produto de maior e menor valor</h1>
+
+    <h3 id="retorno"></h3>
+    <h3 id="retorno1"></h3>
+
+    <script>
+        // Usando setTimeout apenas para melhorar a visualização quando iniciar a página
+        let maior; // variavel para inicializar o valor
+        let menor; // variavel para inicializar o valor
+
+        setTimeout(() => {
+            for (let i = 1; i <= 8; i++) {
+                let valorInserido = parseInt(prompt(`Digite o ${i}ª valor:`))
+                // na primeira iteração armazenamos o valor digitado para ambas variaveis e nas iterações seguintes o usamos como parametro 
+                if (i === 1) {
+                    maior = valorInserido
+                    menor = valorInserido
+                }
+
+                if (valorInserido > maior) {
+                    maior = valorInserido
+                } 
+                if (valorInserido < menor) {
+                    menor = valorInserido
+                } 
+            }
+            document.getElementById('retorno').innerHTML = maior
+            document.getElementById('retorno1').innerHTML = menor
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

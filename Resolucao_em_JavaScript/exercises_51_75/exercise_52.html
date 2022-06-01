@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 52</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 52</h1>
+    <h1>Gurpo de 10 pessoas</h1>
+
+    <h3 id="retorno"></h3>
+    <h3 id="retorno1"></h3>
+    <h3 id="retorno2"></h3>
+    <h3 id="retorno3"></h3>
+
+    <script>
+        // Usando setTimeout apenas para melhorar a visualização quando iniciar a página
+        let somaDasIdades = 0;
+        let pessoasMaiorDeIdade = 0;
+        let pessoasMenorDeCinco = 0;
+        let pessoaMaisVelha = 0
+
+        setTimeout(() => {
+            for (let i = 1; i <= 10; i++) {
+                let valorInserido = parseInt(prompt(`Digite a idade da ${i}ª pessoa:`))
+                
+                somaDasIdades += valorInserido
+
+                if (valorInserido > pessoaMaisVelha) {
+                    pessoaMaisVelha = valorInserido
+                }
+
+                if (valorInserido >= 18) {
+                    pessoasMaiorDeIdade++
+                } else if(valorInserido <= 5) {
+                    pessoasMenorDeCinco++
+                }
+            }
+
+            let mediaDasIdades = somaDasIdades / 10
+
+            document.getElementById('retorno').innerHTML = `a idade média do grupo é : ${mediaDasIdades}`
+            document.getElementById('retorno1').innerHTML = `Pessoas com mais de 18 anos: ${pessoasMaiorDeIdade}`
+            document.getElementById('retorno2').innerHTML = `Pessoas com menos de 5 anos: ${pessoasMenorDeCinco}`
+            document.getElementById('retorno3').innerHTML = `Pessoa mais velha: ${pessoaMaisVelha}`
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

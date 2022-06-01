@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 53</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 53</h1>
+    <h1>Gurpo de 10 pessoas</h1>
+
+    <h3 id="retorno"></h3>
+    <h3 id="retorno1"></h3>
+    <h3 id="retorno2"></h3>
+    <h3 id="retorno3"></h3>
+
+    <script>
+        // Usando setTimeout apenas para melhorar a visualização quando iniciar a página
+        let numeroHomens = 0;
+        let numeroMulheres = 0;
+        let somaDasIdades = 0;
+        let somaDosHomens = 0;
+        let mulheresMaisDeVinte = 0;
+
+        setTimeout(() => {
+            for (let i = 1; i <= 5; i++) {
+
+                let idade = parseInt(prompt(`Digite a idade da ${i}ª pessoa:`))
+                let sexo = prompt(`Digite o sexo da ${i} pessoa (masculino ou feminino): `)
+
+                somaDasIdades += idade
+
+                switch (sexo) {
+                    case 'masculino':
+                        numeroHomens++;
+                        somaDosHomens += idade
+                        break;
+
+                    case 'feminino':
+                        numeroMulheres++;
+                        if (idade >= 20) {
+                            mulheresMaisDeVinte++;
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+
+            }
+
+            let mediaHomens = somaDosHomens / numeroHomens;
+            let mediaDasIdades = somaDasIdades / 5;
+
+            document.getElementById('retorno').innerHTML = `Total de homens: ${numeroHomens}`
+            document.getElementById('retorno1').innerHTML = `Total de mulheres: ${numeroMulheres}`
+            document.getElementById('retorno2').innerHTML = `Média do grupo: ${mediaDasIdades}`
+            document.getElementById('retorno3').innerHTML = `Média dos homens: ${mediaHomens}`
+            document.getElementById('retorno4').innerHTML = `Mulheres com mais de 20 anos: ${mulheresMaisDeVinte}`
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

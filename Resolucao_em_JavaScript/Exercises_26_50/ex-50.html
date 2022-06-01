@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 50</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 50</h1>
+    <h1>Par ou Ímpar</h1>
+
+    <h3 style="max-height: 200px;" id="retorno"></h3>
+    <hr>
+    <h3 id="retorno1"></h3>
+    <h3 id="retorno2"></h3>
+
+    <script>
+        // Usando setTimeout apenas para melhorar a visualização quando iniciar a página
+        let soma = 0; // variavel para armazenar o somatorio
+        let acimaDeCinco = 0;
+        let divisivelPorTres = 0;
+
+        setTimeout(() => {
+            for (let i = 1; i <= 20; i++) {
+                let valor = parseInt(Math.random() * 11)
+
+                if (valor > 5) {
+                    acimaDeCinco++
+                }
+
+                if (valor % 3 ==0) {
+                    divisivelPorTres++
+                }
+
+                i < 20 ? 
+                document.getElementById('retorno').innerHTML += valor + ' , '
+                :
+                document.getElementById('retorno').innerHTML += valor + '.'
+
+            }
+            document.getElementById('retorno1').innerHTML = `O total de números DIVISIVEIS POR 3 é ${divisivelPorTres}`;
+            document.getElementById('retorno2').innerHTML = `O total de números MAIORES QUE 5 é ${acimaDeCinco}`;
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

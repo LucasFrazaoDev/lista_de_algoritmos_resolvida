@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 49</title>
+</head>
+
+<body style="padding: 30px;">
+    <h1>Exercício 49</h1>
+    <h1>Par ou Ímpar</h1>
+
+    <h3 id="retorno"></h3>
+    <h3 id="retorno2"></h3>
+
+    <script>
+        // Usando setTimeout apenas para melhorar a visualização quando iniciar a página
+        let soma = 0; // variavel para armazenar o somatorio
+        let valor; // valor digitado pelo usuario
+        let pares = 0;
+        let impares = 0;
+
+        setTimeout(() => {
+            for (let i = 1; i <= 6; i++) {
+                valor = parseInt(prompt('Digite o ' + i + 'º valor a ser somado: '));
+                valor % 2 == 0 ? pares++ : impares++
+            }
+            document.getElementById('retorno').innerHTML = `O total de números PARES é ${pares}`;
+            document.getElementById('retorno2').innerHTML = `O total de números IMPARES é ${impares}`;
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
